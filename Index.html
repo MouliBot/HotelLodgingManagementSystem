@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-t="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d7a78">
+<title>InnSync · Hotel Operations & Booking</title>
+<link rel="icon" href="Images/Logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles/Site.css">
+</head><body>
+
+<section id="authScreen" hidden></section>
+
+<div id="appShell" hidden>
+  <header class="top">
+    <button class="btn sm" id="mobileMenuButton" aria-label="Menu">☰</button>
+    <a class="brand" href="#/">🏨 InnSync</a>
+    <nav class="proc" aria-label="Quick actions"><b>Quick Actions</b><span id="processSteps" class="row" style="flex-wrap:nowrap"></span></nav>
+    <div class="sp"></div>
+    <select id="themeSelect" aria-label="Theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select>
+    <div class="me"><span id="currentUserName"></span><small id="currentUserRole"></small></div>
+    <button class="btn sm" id="logoutButton">Log out</button>
+  </header>
+  <aside id="sideNav"><nav id="navLinks"></nav></aside>
+  <div id="navScrim"></div>
+  <main id="mainContent"></main>
+</div>
+
+<div id="toastContainer" role="status" aria-live="polite"></div>
+
+<!-- Load order matters: each file only uses things defined in the ones before it. -->
+<script src="Scripts/Utils.js"></script>
+<script src="Scripts/Config.js"></script>
+<script src="Scripts/Session.js"></script>
+<script src="Scripts/Validation.js"></script>
+<script src="Scripts/UiHelpers.js"></script>
+<script src="Scripts/DataStore.js"></script>
+<script src="Scripts/MasterDataModules.js"></script>
+<script src="Scripts/DashboardPage.js"></script>
+<script src="Scripts/BookingsPage.js"></script>
+<script src="Scripts/AvailabilityPage.js"></script>
+<script src="Scripts/CheckInPage.js"></script>
+<script src="Scripts/CheckOutPage.js"></script>
+<script src="Scripts/PaymentsPage.js"></script>
+<script src="Scripts/ReportsPage.js"></script>
+<script src="Scripts/BookStayPage.js"></script>
+<script src="Scripts/MyBookingsPage.js"></script>
+<script src="Scripts/Router.js"></script>
+<script src="Scripts/App.js"></script>
+</body></html>
